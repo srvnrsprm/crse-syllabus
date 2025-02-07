@@ -1,0 +1,68 @@
+* Linux Basics
+** The Linux Kernel and Distributions
+** Getting help with man and info pages
+** Shell hacks to improve your productivity
+** Getting hardware information - CPU, Hard Disk, Network
+** Installing applications - using package managers
+
+* Process Management
+** Process Lifecycle
+** Listing running processes
+** Killing a process
+** Nice values
+** Suspending a process
+** Moving them to background/foreground
+** Signals
+** Cronning scripts
+** Exit code
+** Daemons and Services
+
+* Files Management
+** Directories & files - CRUD
+** Current working directory
+** Home directory
+** Reading the Inode: stat
+** Modifying file's attributes
+
+* User Management
+** Logging in
+** Changing password
+** Users, groups and permissions
+** suid/sgid/sticky bits
+** Creating and deleting users and groups
+** sudo user
+** who
+
+* Network Management
+** Network interfaces
+** ping
+** netstat
+** SSH
+** screen / tmux
+** scp
+
+* Amazon Web Services
+** Introduction to cloud computing
+** SaaS, PaaS, IaaS
+** Introduction to the AWS products
+** Amazon Elastic Compute Cloud (EC2)
+** Amazon Simple Storage Service (S3)
+** Amazon Relational Database Service (RDS)
+** Amazon Elastic Beanstalk (EBS)
+ 
+* Shell Scripting
+** I/O Redirection
+** Filter commands - grep, sed, awk, wc, sort, head, tail etc
+** Commonly used shell commands - date, find, locate, gzip, tar
+** Variables
+** Environment variables
+** Aliases
+** Regular Expressions
+
+* Mastering a command line editor - vi
+** Mastering a command line editor - vi
+** Basic editing features
+** Modes
+** Moving around
+** Visual mode
+** Tips to efficiently use the editor

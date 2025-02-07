@@ -1,0 +1,80 @@
+* Introduction to Bash
+** What is a shell?
+** What is Bash?
+
+* Basics of Bash
+** Invoking Bash
+** Simple Commands
+** Pipelines
+** Tilde Expansion
+** Brace expansion
+** Looping constructs
+*** until
+*** while
+*** for
+** Using seq command
+** Conditional constructs
+*** if statement
+*** case statement
+*** select statement
+** Redirections
+** Using sleep command
+** Using export command
+** Common commands like date, ls, wc, locate, find
+** Using Aliases
+** Using backtick
+ 
+* Process Management
+** Process Lifecycle
+** Listing running processes
+** Killing a process
+** Suspending a process
+** Signals
+** Cron scripts
+** Exit code
+** Daemons and Services
+
+* User Management
+** Logging in
+** Changing password
+** Users, groups and permissions
+** suid/sgid/sticky bits
+** Creating and deleting users and groups
+** sudo user
+** who
+
+* Network Management
+** Network interfaces
+** DNS lookups
+** ping
+** netstat
+** SSH
+** tmux/screen
+** scp
+
+* I/O Redirection
+** Read
+** Redirecting input
+** Redirecting output
+** Appending to redirect output
+ 
+* Environment Variables
+** HOME
+** USER
+
+* Some popular external programs
+** sed
+** cal
+** grep
+** man
+** info
+ 
+* Startup Files
+** .bashrc
+** .zshrc
+
+* Shell Arithmetic
+** Use of let, expr
+** Double parantheses $(( ))
+** Arithmetic expansion
+ 
