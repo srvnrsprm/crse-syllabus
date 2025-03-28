@@ -1,0 +1,85 @@
+* Introduction to JavaScript
+** Why Java? Why Script?
+** Important features of JavaScript
+* Basic Language Constructs
+** Values
+** Numbers
+** Strings
+** Booleans
+** Objects
+** null
+** undefined
+** Typing
+** Reserved Words
+** Comments
+** Operators
+** Statements
+** Expressions
+** Conditionals
+** Looping
+* Objects
+** Understanding Primitive Types
+** Composite Types
+** Object Internals ‐ Use of Hashtables
+** Predefined objects
+** Ways to create Objects
+** Ways to iterate Objects
+** Pass by reference
+* Functions and Functional Programming
+** Function syntax
+** Return values of functions
+** Anonymous Functions
+** Inner Functions
+** Function Scope
+** Globals and how to avoid them
+** Functions as Objects
+** call and apply
+* Arrays
+** How JavaScript arrays are different
+** Multidimensional arrays
+* Prototypes and Prototypal Inheritance
+** Inheritance in JavaScript
+** Constructor functions
+** The prototype link
+** The object Function
+** Difference from classical inheritance
+** The this keyword
+* JavaScript Programming Paradigms
+** Object oriented programming in JavaScript
+** Functional programming in JavaScript
+** Aspect oriented programming in JavaScript
+* Document Object Model
+** Introduction to DOM
+** A little history of the web
+** Levels (or types) of DOM
+** Nodes
+** Elements
+** Attributes
+** Text
+** Comment
+* JavaScript and DOM
+** Parsing XML in JavaScript
+** Create elements
+** Retrieve elements
+** Delete elements
+** Work with attributes
+** A few examples
+* Event Handling in JavaScript
+** Adding event handlers
+** Asynchronous handling of events with callbacks
+** Event bubbling
+** Event capturing
+* JavaScript Libraries
+** The need for libraries
+** Handling cross-browser issues with JS libraries
+** jQuery
+** Node.js
+* AJAX and XMLHttpRequest
+** The components - XMLHttp, JavaScript, XML (or JSON) and DOM
+** Intelligent clients with AJAX
+** Examples of AJAX usage
+* Data Formats
+** What are data formats?
+** Difference from data structures
+** Serialization and deserialization
+** Maps as generic data containers

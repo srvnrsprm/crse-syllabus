@@ -1,0 +1,88 @@
+* Introduction
+** How is Java different from C/C++?
+** Things you can do in Java
+** Why Java?
+** Terminologies
+** Installing Java
+** A Sample Run
+** A Few Assignments
+* Java Language Basics
+** Language Basics
+** Naming Rules
+** Primitive Datatypes and Arrays
+** Type Conversion
+** Type Casting
+** Arrays
+** Operators
+** Expressions, Statements, Blocks, Methods
+** Operator Precedence
+** Scope
+** Method Overloading
+** Recursion
+** Call by Value/Call by Reference
+** Control Flow
+** Strings
+* OOP in Java
+** Object Oriented Programming – The Need
+** Association, Composition, Aggregation
+** Inheritance
+** Composite Types – Lists, Sets and Maps
+** Interfaces and Implementation
+** Design by Contract
+** Classes and Objects
+** Constructors
+** static methods
+** public, private, protected class/methods
+* Advanced Class Features
+** Declare and use static variables and methods
+** Declare and use final classes, methods, and variables
+** Use abstract methods and interfaces
+** Use inner classes
+** Classes for Primitive Types
+** package private, protected
+** Iterators
+** abstract classes
+** Method Overriding
+** Generics
+* Advanced Java
+** Advanced features of Eclipse IDE
+** Configuration Management
+** Logging
+** Debugging
+** Reuse - DRY principles
+** Unit-testing and Test Driven Development
+** Evolving the design - Refactoring
+** Javadocs
+** Packages
+** I/O Streams
+** Serialization
+** Reflection & Annotations
+** Working with Third Party Libraries
+* Parallel programming
+** The need
+** Parallel programming paradigm
+** Threads
+** Synchronization
+** Concurrency objects
+* Exceptions
+** Define exceptions
+** Describe the use of the keywords try, catch, and finally
+** Describe exception categories
+** Identify common exceptions
+** Write code to handle your own exceptions
+* JDBC
+** Introduction to Database Concepts
+** ER modelling
+** Handling 1..1, 1..n, m..n relationships
+** Primary and Foreign Keys
+** Normalization
+** Creating a database
+** Creating Tables
+** CRUD Operations on Tables
+** Introduction to JDBC
+** Connection
+** Statements
+** ResultSet
+** SQLException
+** JDBC Driver Types
+** Working with Prepared Statements
