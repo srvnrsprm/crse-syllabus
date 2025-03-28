@@ -1,3 +1,5 @@
+#+BIND: org-export-allow-bind-keywords t
+
 * Introduction to Bash
 ** What is a shell?
 ** What is Bash?

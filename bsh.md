@@ -1,424 +1,425 @@
 
 # Table of Contents
 
-1.  [Introduction to Bash](#org892db74)
-    1.  [What is a shell?](#org9b94cf0)
-    2.  [What is Bash?](#orgcd4c206)
-2.  [Basics of Bash](#org11e967f)
-    1.  [Invoking Bash](#org77dacec)
-    2.  [Simple Commands](#orgaf34517)
-    3.  [Pipelines](#org01dc071)
-    4.  [Tilde Expansion](#orgba29042)
-    5.  [Brace expansion](#org85e4482)
-    6.  [Looping constructs](#orgbd910a4)
-        1.  [until](#orgaf5c84b)
-        2.  [while](#org9be4797)
-        3.  [for](#orgd040095)
-    7.  [Using seq command](#org2422c45)
-    8.  [Conditional constructs](#orge461e30)
-        1.  [if statement](#org657217a)
-        2.  [case statement](#org9e3175d)
-        3.  [select statement](#org2e7f9bd)
-    9.  [Redirections](#org13b05bc)
-    10. [Using sleep command](#orgf7f470d)
-    11. [Using export command](#org37e8c1c)
-    12. [Common commands like date, ls, wc, locate, find](#org14bcdcf)
-    13. [Using Aliases](#orgef56787)
-    14. [Using backtick](#org7e7b95d)
-3.  [Process Management](#org0a3311d)
-    1.  [Process Lifecycle](#org7e13e50)
-    2.  [Listing running processes](#orgd4f145a)
-    3.  [Killing a process](#org7f665fd)
-    4.  [Suspending a process](#org4c2c97a)
-    5.  [Signals](#org8a2c701)
-    6.  [Cron scripts](#org858e6f5)
-    7.  [Exit code](#orgc6be9e0)
-    8.  [Daemons and Services](#org12bb3cd)
-4.  [User Management](#org92ac35f)
-    1.  [Logging in](#org80c8e36)
-    2.  [Changing password](#orgdde1e59)
-    3.  [Users, groups and permissions](#org4bf4419)
-    4.  [suid/sgid/sticky bits](#org631be10)
-    5.  [Creating and deleting users and groups](#org0ab1804)
-    6.  [sudo user](#org776f197)
-    7.  [who](#org377e05f)
-5.  [Network Management](#orgbe7c8ca)
-    1.  [Network interfaces](#org03c349f)
-    2.  [DNS lookups](#org231997c)
-    3.  [ping](#orgc0fe4ea)
-    4.  [netstat](#orgbc05eac)
-    5.  [SSH](#orgaf25c13)
-    6.  [tmux/screen](#org671d016)
-    7.  [scp](#org95eabde)
-6.  [I/O Redirection](#org18f9eb3)
-    1.  [Read](#org25d152d)
-    2.  [Redirecting input](#org8425bb6)
-    3.  [Redirecting output](#org44039b5)
-    4.  [Appending to redirect output](#org30dc9cc)
-7.  [Environment Variables](#org8efb250)
-    1.  [HOME](#orgbb85318)
-    2.  [USER](#orgdb2280c)
-8.  [Some popular external programs](#org9ea18ed)
-    1.  [sed](#org6776be2)
-    2.  [cal](#org0a888d7)
-    3.  [grep](#orgc27e139)
-    4.  [man](#org63104e8)
-    5.  [info](#org847b416)
-9.  [Startup Files](#org3dc9d81)
-    1.  [.bashrc](#org151b6bf)
-    2.  [.zshrc](#org236cdc3)
-10. [Shell Arithmetic](#orge8db24d)
-    1.  [Use of let, expr](#org91cd7b9)
-    2.  [Double parantheses $(( ))](#orgbed0aed)
-    3.  [Arithmetic expansion](#orgba122d9)
+1.  [Introduction to Bash](#org1894c4a)
+    1.  [What is a shell?](#org0fbc6e9)
+    2.  [What is Bash?](#org2fc8550)
+2.  [Basics of Bash](#org939b64a)
+    1.  [Invoking Bash](#org36641f9)
+    2.  [Simple Commands](#org2f74e2c)
+    3.  [Pipelines](#orgeef6ac2)
+    4.  [Tilde Expansion](#org6580e2d)
+    5.  [Brace expansion](#org5cd9561)
+    6.  [Looping constructs](#orgb8bf40e)
+        1.  [until](#org29b6fd5)
+        2.  [while](#orgffa46f4)
+        3.  [for](#orgf14eb2e)
+    7.  [Using seq command](#org091c5a7)
+    8.  [Conditional constructs](#org7abb8f5)
+        1.  [if statement](#orgadc8f0a)
+        2.  [case statement](#org90daf9e)
+        3.  [select statement](#orge1ffd00)
+    9.  [Redirections](#orgce655fc)
+    10. [Using sleep command](#orgfbbb109)
+    11. [Using export command](#org76db9ca)
+    12. [Common commands like date, ls, wc, locate, find](#org802e922)
+    13. [Using Aliases](#orgd9a879d)
+    14. [Using backtick](#org7340d40)
+3.  [Process Management](#org2e322cc)
+    1.  [Process Lifecycle](#org4f4927e)
+    2.  [Listing running processes](#orgeeaaec7)
+    3.  [Killing a process](#orgaa18749)
+    4.  [Suspending a process](#org6c7c879)
+    5.  [Signals](#org8174f88)
+    6.  [Cron scripts](#org4a39db5)
+    7.  [Exit code](#org59f5899)
+    8.  [Daemons and Services](#orge66f736)
+4.  [User Management](#org361752e)
+    1.  [Logging in](#orgd265436)
+    2.  [Changing password](#org2cc1809)
+    3.  [Users, groups and permissions](#orge630eab)
+    4.  [suid/sgid/sticky bits](#org83a5a19)
+    5.  [Creating and deleting users and groups](#org5ff7dce)
+    6.  [sudo user](#org008b634)
+    7.  [who](#org93b705c)
+5.  [Network Management](#orgec88c2a)
+    1.  [Network interfaces](#org3dd7cfe)
+    2.  [DNS lookups](#org230c7d3)
+    3.  [ping](#orgd539cc3)
+    4.  [netstat](#orge8d4ce5)
+    5.  [SSH](#orgd1e775e)
+    6.  [tmux/screen](#org4a8e22a)
+    7.  [scp](#org2002ec5)
+6.  [I/O Redirection](#orgdd08bb9)
+    1.  [Read](#orge8ef4aa)
+    2.  [Redirecting input](#orgff93568)
+    3.  [Redirecting output](#orgbc1551a)
+    4.  [Appending to redirect output](#orgdd23212)
+7.  [Environment Variables](#orgfc81bba)
+    1.  [HOME](#orgefbeccd)
+    2.  [USER](#orgfac98f0)
+8.  [Some popular external programs](#org6c22ae7)
+    1.  [sed](#orga2d49d3)
+    2.  [cal](#orgef90977)
+    3.  [grep](#orge5bdb93)
+    4.  [man](#org42f8dfd)
+    5.  [info](#orgdfe4bdf)
+9.  [Startup Files](#org9952a76)
+    1.  [.bashrc](#orge79da3b)
+    2.  [.zshrc](#org6c7b91b)
+10. [Shell Arithmetic](#orgbee66af)
+    1.  [Use of let, expr](#orgd1250be)
+    2.  [Double parantheses $(( ))](#orga65ee9e)
+    3.  [Arithmetic expansion](#org88dfc63)
 
 
-<a id="org892db74"></a>
+
+<a id="org1894c4a"></a>
 
 # Introduction to Bash
 
 
-<a id="org9b94cf0"></a>
+<a id="org0fbc6e9"></a>
 
 ## What is a shell?
 
 
-<a id="orgcd4c206"></a>
+<a id="org2fc8550"></a>
 
 ## What is Bash?
 
 
-<a id="org11e967f"></a>
+<a id="org939b64a"></a>
 
 # Basics of Bash
 
 
-<a id="org77dacec"></a>
+<a id="org36641f9"></a>
 
 ## Invoking Bash
 
 
-<a id="orgaf34517"></a>
+<a id="org2f74e2c"></a>
 
 ## Simple Commands
 
 
-<a id="org01dc071"></a>
+<a id="orgeef6ac2"></a>
 
 ## Pipelines
 
 
-<a id="orgba29042"></a>
+<a id="org6580e2d"></a>
 
 ## Tilde Expansion
 
 
-<a id="org85e4482"></a>
+<a id="org5cd9561"></a>
 
 ## Brace expansion
 
 
-<a id="orgbd910a4"></a>
+<a id="orgb8bf40e"></a>
 
 ## Looping constructs
 
 
-<a id="orgaf5c84b"></a>
+<a id="org29b6fd5"></a>
 
 ### until
 
 
-<a id="org9be4797"></a>
+<a id="orgffa46f4"></a>
 
 ### while
 
 
-<a id="orgd040095"></a>
+<a id="orgf14eb2e"></a>
 
 ### for
 
 
-<a id="org2422c45"></a>
+<a id="org091c5a7"></a>
 
 ## Using seq command
 
 
-<a id="orge461e30"></a>
+<a id="org7abb8f5"></a>
 
 ## Conditional constructs
 
 
-<a id="org657217a"></a>
+<a id="orgadc8f0a"></a>
 
 ### if statement
 
 
-<a id="org9e3175d"></a>
+<a id="org90daf9e"></a>
 
 ### case statement
 
 
-<a id="org2e7f9bd"></a>
+<a id="orge1ffd00"></a>
 
 ### select statement
 
 
-<a id="org13b05bc"></a>
+<a id="orgce655fc"></a>
 
 ## Redirections
 
 
-<a id="orgf7f470d"></a>
+<a id="orgfbbb109"></a>
 
 ## Using sleep command
 
 
-<a id="org37e8c1c"></a>
+<a id="org76db9ca"></a>
 
 ## Using export command
 
 
-<a id="org14bcdcf"></a>
+<a id="org802e922"></a>
 
 ## Common commands like date, ls, wc, locate, find
 
 
-<a id="orgef56787"></a>
+<a id="orgd9a879d"></a>
 
 ## Using Aliases
 
 
-<a id="org7e7b95d"></a>
+<a id="org7340d40"></a>
 
 ## Using backtick
 
 
-<a id="org0a3311d"></a>
+<a id="org2e322cc"></a>
 
 # Process Management
 
 
-<a id="org7e13e50"></a>
+<a id="org4f4927e"></a>
 
 ## Process Lifecycle
 
 
-<a id="orgd4f145a"></a>
+<a id="orgeeaaec7"></a>
 
 ## Listing running processes
 
 
-<a id="org7f665fd"></a>
+<a id="orgaa18749"></a>
 
 ## Killing a process
 
 
-<a id="org4c2c97a"></a>
+<a id="org6c7c879"></a>
 
 ## Suspending a process
 
 
-<a id="org8a2c701"></a>
+<a id="org8174f88"></a>
 
 ## Signals
 
 
-<a id="org858e6f5"></a>
+<a id="org4a39db5"></a>
 
 ## Cron scripts
 
 
-<a id="orgc6be9e0"></a>
+<a id="org59f5899"></a>
 
 ## Exit code
 
 
-<a id="org12bb3cd"></a>
+<a id="orge66f736"></a>
 
 ## Daemons and Services
 
 
-<a id="org92ac35f"></a>
+<a id="org361752e"></a>
 
 # User Management
 
 
-<a id="org80c8e36"></a>
+<a id="orgd265436"></a>
 
 ## Logging in
 
 
-<a id="orgdde1e59"></a>
+<a id="org2cc1809"></a>
 
 ## Changing password
 
 
-<a id="org4bf4419"></a>
+<a id="orge630eab"></a>
 
 ## Users, groups and permissions
 
 
-<a id="org631be10"></a>
+<a id="org83a5a19"></a>
 
 ## suid/sgid/sticky bits
 
 
-<a id="org0ab1804"></a>
+<a id="org5ff7dce"></a>
 
 ## Creating and deleting users and groups
 
 
-<a id="org776f197"></a>
+<a id="org008b634"></a>
 
 ## sudo user
 
 
-<a id="org377e05f"></a>
+<a id="org93b705c"></a>
 
 ## who
 
 
-<a id="orgbe7c8ca"></a>
+<a id="orgec88c2a"></a>
 
 # Network Management
 
 
-<a id="org03c349f"></a>
+<a id="org3dd7cfe"></a>
 
 ## Network interfaces
 
 
-<a id="org231997c"></a>
+<a id="org230c7d3"></a>
 
 ## DNS lookups
 
 
-<a id="orgc0fe4ea"></a>
+<a id="orgd539cc3"></a>
 
 ## ping
 
 
-<a id="orgbc05eac"></a>
+<a id="orge8d4ce5"></a>
 
 ## netstat
 
 
-<a id="orgaf25c13"></a>
+<a id="orgd1e775e"></a>
 
 ## SSH
 
 
-<a id="org671d016"></a>
+<a id="org4a8e22a"></a>
 
 ## tmux/screen
 
 
-<a id="org95eabde"></a>
+<a id="org2002ec5"></a>
 
 ## scp
 
 
-<a id="org18f9eb3"></a>
+<a id="orgdd08bb9"></a>
 
 # I/O Redirection
 
 
-<a id="org25d152d"></a>
+<a id="orge8ef4aa"></a>
 
 ## Read
 
 
-<a id="org8425bb6"></a>
+<a id="orgff93568"></a>
 
 ## Redirecting input
 
 
-<a id="org44039b5"></a>
+<a id="orgbc1551a"></a>
 
 ## Redirecting output
 
 
-<a id="org30dc9cc"></a>
+<a id="orgdd23212"></a>
 
 ## Appending to redirect output
 
 
-<a id="org8efb250"></a>
+<a id="orgfc81bba"></a>
 
 # Environment Variables
 
 
-<a id="orgbb85318"></a>
+<a id="orgefbeccd"></a>
 
 ## HOME
 
 
-<a id="orgdb2280c"></a>
+<a id="orgfac98f0"></a>
 
 ## USER
 
 
-<a id="org9ea18ed"></a>
+<a id="org6c22ae7"></a>
 
 # Some popular external programs
 
 
-<a id="org6776be2"></a>
+<a id="orga2d49d3"></a>
 
 ## sed
 
 
-<a id="org0a888d7"></a>
+<a id="orgef90977"></a>
 
 ## cal
 
 
-<a id="orgc27e139"></a>
+<a id="orge5bdb93"></a>
 
 ## grep
 
 
-<a id="org63104e8"></a>
+<a id="org42f8dfd"></a>
 
 ## man
 
 
-<a id="org847b416"></a>
+<a id="orgdfe4bdf"></a>
 
 ## info
 
 
-<a id="org3dc9d81"></a>
+<a id="org9952a76"></a>
 
 # Startup Files
 
 
-<a id="org151b6bf"></a>
+<a id="orge79da3b"></a>
 
 ## .bashrc
 
 
-<a id="org236cdc3"></a>
+<a id="org6c7b91b"></a>
 
 ## .zshrc
 
 
-<a id="orge8db24d"></a>
+<a id="orgbee66af"></a>
 
 # Shell Arithmetic
 
 
-<a id="org91cd7b9"></a>
+<a id="orgd1250be"></a>
 
 ## Use of let, expr
 
 
-<a id="orgbed0aed"></a>
+<a id="orga65ee9e"></a>
 
 ## Double parantheses $(( ))
 
 
-<a id="orgba122d9"></a>
+<a id="org88dfc63"></a>
 
 ## Arithmetic expansion
 
